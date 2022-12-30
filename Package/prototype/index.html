@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WeGo_Blockly</title>
+  <script src="../blockly_compressed.js"></script>
+  <script src="../python_compressed.js"></script> 
+  <script src="../blocks_compressed.js"></script>
+  <script src="../msg/ko.js"></script>
+  <script src="custom_blocks/from_import.js"></script>
+  <script src="./custom_blocks/start.js"></script>
+  <script src="./custom_blocks/publisher_import.js"></script>
+  
+    <style>
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+      display: grid;
+      grid-template-areas: "h1 h1 h1"
+                            "BA BA TA"
+                            "FT FT FT";
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 140%;
+      text-align: center;
+      grid-area: h1;
+    }
+    .BA{grid-area: BA;}
+    .TA{grid-area: TA; background-size:cover; resize: none;} 
+    .FT{grid-area: FT;}
+    #textArea{height: 480px; width: 400px; background-color: gray; color:#fff}
+    #demo {
+      height: 480px; width: 1000px;
+    }
+    #blocklyDiv{height: 486px; width: 1000px;}
+  </style>
+</head>
+<body>
+    <h1><img src="./Imag/wego_logo.png" alt="LOGo"></h1>
+    <div id="demo" class="BA">
+        <div id="blocklyDiv" class=""></div>   <!-- 항상 blockly div를 설정 해준 후에 툴박스와 주사를 해줘야한다. (빈공간에 툴박스를 넣을 순 없으니까) -->
+    </div>
+    <script src="./toolbox.js"></script>
+    <script src="./Area.js"></script>
+    <textarea id="textArea" class="TA" readonly ></textarea>
+    <script src ="./code_generator.js"></script>
+    <footer class="FT">
+    </footer>
+</body>
+</html>
